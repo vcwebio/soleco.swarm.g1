@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+export CONTECO_LABEL="swarm.g1 -SolEco"
+export CONTECO_DESCRIPTION="SolEco first generation swarm solution."
+
+export CONTECO_TYPE="swarm"
+export CONTECO_NAME="g1"
+export CONTECO_TAG="v1.0.1"
+export CONTECO_TAG_TYPE="incremental"
+
+export CONTECO_BASE="image.wrapper"
+export CONTECO_BUILD="soleco"

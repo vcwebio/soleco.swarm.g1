@@ -1,0 +1,33 @@
+##### BEGIN soleco/Dockerfile/image-header #####
+FROM vcwebio/conteco.image.wrapper AS base
+##### END soleco/Dockerfile/image-header #####
+
+##### BEGIN soleco/Dockerfile/conteco #####
+COPY ./soleco/ /soleco/
+RUN rm -rf /conteco/repo
+COPY ./ /conteco/repo/
+##### END soleco/Dockerfile/conteco #####
+
+##### BEGIN image/Dockerfile/build-instructions #####
+##### END image/Dockerfile/build-instructions #####
+
+##### BEGIN soleco/Dockerfile/env-labels-footer #####
+ENV CONTECO_REALM="vcwebio" \
+    CONTECO_ECOSYSTEM="soleco" \
+    CONTECO_TYPE="swarm" \
+    CONTECO_NAME="g1" \
+    CONTECO_TAG="v1.0.1" \
+    CONTECO_BASE="image.wrapper" \
+    CONTECO_BUILD="soleco"
+LABEL io.vcweb.schema-version="1.0" \
+      io.vcweb.realm="vcwebio" \
+      io.vcweb.ecosystem="soleco" \
+      io.vcweb.type="swarm" \
+      io.vcweb.name="g1" \
+      io.vcweb.tag="v1.0.1" \
+      io.vcweb.base="image.wrapper" \
+      io.vcweb.build="soleco" \
+      io.vcweb.label="swarm.g1 -SolEco" \
+      io.vcweb.description="SolEco first generation swarm solution." \
+      io.vcweb.docker.cmd.help="docker run vcwebio/soleco.swarm.g1 --help"
+##### END soleco/Dockerfile/env-labels-footer #####
