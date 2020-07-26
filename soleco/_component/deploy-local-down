@@ -31,30 +31,6 @@ done;
 continue="true"
 while [[ "true" == "$continue" ]] ;
 do
-	executionplane docker volume rm "swarm_g1_metrics_monitor_heartbeat_data_volume"
-	result=$(docker volume ls | grep "swarm_g1_metrics_monitor_heartbeat_data_volume")
-	if [[ "$result" == "" ]] ; then
-		continue="false"
-	else
-		sleep 3;
-	fi
-done;
-	
-continue="true"
-while [[ "true" == "$continue" ]] ;
-do
-	executionplane docker volume rm "swarm_g1_metrics_monitor_heartbeat_monitors_volume"
-	result=$(docker volume ls | grep "swarm_g1_metrics_monitor_heartbeat_monitors_volume")
-	if [[ "$result" == "" ]] ; then
-		continue="false"
-	else
-		sleep 3;
-	fi
-done;
-	
-continue="true"
-while [[ "true" == "$continue" ]] ;
-do
 	executionplane docker volume rm "swarm_g1_ingest_container_logs_filebeat_volume"
 	result=$(docker volume ls | grep "swarm_g1_ingest_container_logs_filebeat_volume")
 	if [[ "$result" == "" ]] ; then
@@ -141,6 +117,30 @@ while [[ "true" == "$continue" ]] ;
 do
 	executionplane docker volume rm "swarm_g1_kz_zookeeper_log_volume"
 	result=$(docker volume ls | grep "swarm_g1_kz_zookeeper_log_volume")
+	if [[ "$result" == "" ]] ; then
+		continue="false"
+	else
+		sleep 3;
+	fi
+done;
+	
+continue="true"
+while [[ "true" == "$continue" ]] ;
+do
+	executionplane docker volume rm "swarm_g1_metrics_monitor_heartbeat_data_volume"
+	result=$(docker volume ls | grep "swarm_g1_metrics_monitor_heartbeat_data_volume")
+	if [[ "$result" == "" ]] ; then
+		continue="false"
+	else
+		sleep 3;
+	fi
+done;
+	
+continue="true"
+while [[ "true" == "$continue" ]] ;
+do
+	executionplane docker volume rm "swarm_g1_metrics_monitor_heartbeat_monitors_volume"
+	result=$(docker volume ls | grep "swarm_g1_metrics_monitor_heartbeat_monitors_volume")
 	if [[ "$result" == "" ]] ; then
 		continue="false"
 	else
