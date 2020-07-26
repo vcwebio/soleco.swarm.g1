@@ -8,7 +8,7 @@
 #  check.receive: 'Hello World'
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     stack: kz
     type: external
     service: kafka
@@ -23,7 +23,7 @@
 #  check.receive: 'Hello World'
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     stack: kz
     type: external
     service: kafka

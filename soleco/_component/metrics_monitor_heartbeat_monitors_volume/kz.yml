@@ -2,13 +2,13 @@
 - type: tcp
   id: internal_kz_kafka
   name: KZ Kafka Internal
-  hosts: ["module_swarm_g1_kz_kafka"]
+  hosts: ["swarm_g1_kz_kafka"]
   ports: [9092]
 #  check.send: 'Hello World'
 #  check.receive: 'Hello World'
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     stack: kz
     type: external
     service: kafka
@@ -17,13 +17,13 @@
 - type: tcp
   id: internal_kz_zookeeper
   name: KZ Zookeeper Internal
-  hosts: ["module_swarm_g1_kz_zookeeper"]
+  hosts: ["swarm_g1_kz_zookeeper"]
   ports: [2181]
 #  check.send: 'Hello World'
 #  check.receive: 'Hello World'
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     stack: kz
     type: external
     service: kafka

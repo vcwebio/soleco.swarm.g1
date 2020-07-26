@@ -37,6 +37,8 @@ executionplane --silent docker run -v swarm_g1_ekg_elasticsearch_volume:/usr/sha
 		
 executionplane --silent docker run -v swarm_g1_ekg_grafana_volume:/var/lib/grafana ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/ekg_grafana_volume.tar
 		
+executionplane --silent docker run -v swarm_g1_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/_component/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
+		
 executionplane --silent docker run -v swarm_g1_export_streamsets_volume:/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/export_streamsets_volume.tar
 		
 executionplane --silent docker run -v swarm_g1_processor_streamsets_volume:/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/processor_streamsets_volume.tar

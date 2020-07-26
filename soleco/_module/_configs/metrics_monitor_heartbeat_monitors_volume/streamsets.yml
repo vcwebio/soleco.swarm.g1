@@ -5,7 +5,7 @@
   check.response.status: [301]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "${MODECO_STACKSCOPE}"
     type: external
     service: streamsets
     area: endpoint
@@ -17,7 +17,7 @@
   check.response.status: [301]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "${MODECO_STACKSCOPE}"
     type: external
     service: streamsets
     area: endpoint
@@ -34,7 +34,7 @@ $MODECO_EKG_KIBANA_ENDPOINT_URL
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "${MODECO_STACKSCOPE}"
     type: internal
     service: streamsets
     area: endpoint
@@ -46,7 +46,7 @@ $MODECO_EKG_KIBANA_ENDPOINT_URL
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "${MODECO_STACKSCOPE}"
     type: internal
     service: streamsets
     area: endpoint

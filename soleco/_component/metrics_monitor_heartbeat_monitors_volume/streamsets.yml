@@ -1,11 +1,11 @@
 - type: http
   id: external_processor_streamsets_endpoint
   name: Processor StreamSets External
-  hosts: ["http://${CONTECO_HOSTNAME}/swarm/processor/streamsets"]
+  hosts: ["http://${CONTECO_HOSTNAME}/swarm_g1/processor/streamsets"]
   check.response.status: [301]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     type: external
     service: streamsets
     area: endpoint
@@ -13,11 +13,11 @@
 - type: http
   id: external_export_streamsets_endpoint
   name: Export StreamSets External
-  hosts: ["http://${CONTECO_HOSTNAME}/swarm/export/streamsets"]
+  hosts: ["http://${CONTECO_HOSTNAME}/swarm_g1/export/streamsets"]
   check.response.status: [301]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     type: external
     service: streamsets
     area: endpoint
@@ -30,11 +30,11 @@
 - type: http
   id: internal_export_streamsets_endpoint
   name: Export StreamSets Internal
-  hosts: ["http://module_swarm_g1_export_streamsets:18630"]
+  hosts: ["http://swarm_g1_export_streamsets:18630"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     type: internal
     service: streamsets
     area: endpoint
@@ -42,11 +42,11 @@
 - type: http
   id: internal_processor_streamsets_endpoint
   name: Processor StreamSets Internal
-  hosts: ["http://module_swarm_g1_processor_streamsets:18630"]
+  hosts: ["http://swarm_g1_processor_streamsets:18630"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
-    scope: module
+    scope: "swarm_g1"
     type: internal
     service: streamsets
     area: endpoint
