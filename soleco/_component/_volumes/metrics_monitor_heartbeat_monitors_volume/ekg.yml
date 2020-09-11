@@ -14,7 +14,7 @@
 - type: http
   id: external_ekg_grafana_endpoint
   name: EKG grafana External
-  hosts: ["http://${CONTECO_HOSTNAME}/swarm_g1/ekg/grafana"]
+  hosts: ["http:///swarm_g1/ekg/grafana"]
   check.response.status: [301]
   schedule: '@every 30s'
   fields:
@@ -27,7 +27,7 @@
 - type: http
   id: external_ekg_kibana_endpoint
   name: EKG Kibana External
-  hosts: ["http://${CONTECO_HOSTNAME}/swarm_g1/ekg/kibana"]
+  hosts: ["http:///swarm_g1/ekg/kibana"]
   check.response.status: [301]
   schedule: '@every 30s'
   fields:

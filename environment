@@ -5,7 +5,7 @@ export CONTECO_DESCRIPTION="SolEco first generation swarm solution."
 
 export CONTECO_TYPE="swarm"
 export CONTECO_NAME="g1"
-export CONTECO_TAG="v1.0.4"
+export CONTECO_TAG="v1.0.5"
 export CONTECO_TAG_TYPE="incremental"
 
 export CONTECO_BASE="image.wrapper"
