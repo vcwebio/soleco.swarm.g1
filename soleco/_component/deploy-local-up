@@ -33,13 +33,13 @@
 	
 	executionplane --silent docker volume create swarm_g1_processor_streamsets_volume
 	
-executionplane --silent docker run -v swarm_g1_ekg_elasticsearch_volume:/usr/share/elasticsearch/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco//_component/_volumes/ekg_elasticsearch_volume.tar
+executionplane --silent docker run -v swarm_g1_ekg_elasticsearch_volume:/usr/share/elasticsearch/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/_volumes/ekg_elasticsearch_volume.tar
 		
-executionplane --silent docker run -v swarm_g1_ekg_grafana_volume:/var/lib/grafana ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco//_component/_volumes/ekg_grafana_volume.tar
+executionplane --silent docker run -v swarm_g1_ekg_grafana_volume:/var/lib/grafana ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/_volumes/ekg_grafana_volume.tar
 		
-executionplane --silent docker run -v swarm_g1_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco//_component/_volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
+executionplane --silent docker run -v swarm_g1_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/_component/_volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
 		
-executionplane --silent docker run -v swarm_g1_export_streamsets_volume:/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco//_component/_volumes/export_streamsets_volume.tar
+executionplane --silent docker run -v swarm_g1_export_streamsets_volume:/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/_volumes/export_streamsets_volume.tar
 		
-executionplane --silent docker run -v swarm_g1_processor_streamsets_volume:/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco//_component/_volumes/processor_streamsets_volume.tar
+executionplane --silent docker run -v swarm_g1_processor_streamsets_volume:/data ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /soleco/_component/_volumes/processor_streamsets_volume.tar
 		
